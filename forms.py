@@ -1,10 +1,7 @@
 from django import forms
-
 from properties.models import Amenity, Property
 
-
 class SmartMatchForm(forms.Form):
-    # What the user wants. Every field is optional.
     location = forms.CharField(
         required=False,
         max_length=80,
