@@ -1,6 +1,5 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
-
 from properties.models import Property
 from . import forms
 from .matching import smart_match
@@ -27,7 +26,6 @@ def search(request):
         results = smart_match(properties, prefs)
         total = len(results)
         page = Paginator(results, 9).get_page(request.GET.get('page'))
-
     query_string = request.GET.copy()
     query_string.pop('page', None)
     return render(
