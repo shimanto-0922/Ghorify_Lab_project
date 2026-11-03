@@ -1,10 +1,7 @@
 from django.test import TestCase
-
 from accounts.models import User
 from properties.models import Amenity, Property, Utility
-
 from .matching import score_property, smart_match
-
 
 def make_property(landlord, **overrides):
     data = dict(landlord=landlord, title='Flat', description='Nice', location='Dhanmondi', address='Road 1',
