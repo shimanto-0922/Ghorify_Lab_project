@@ -1,16 +1,4 @@
-# Ghorify match engine
-#
-# The user says what they want on the Smart Match page.
-# Every property gets points only for the preferences the user filled in,
-# so an empty field never lowers the score.
-#
-#     match % = points earned / points possible * 100
-#
-# Only homes inside the min and max budget are shown. Some preferences give
-# half points, e.g. a flat with one bedroom less than asked.
-
 from decimal import Decimal
-
 
 WEIGHTS = {
     'budget': 30,
