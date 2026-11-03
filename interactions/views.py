@@ -6,10 +6,6 @@ from properties.models import Property
 from .models import Comparison, ComparisonItem, Favourite
 
 
-# ---------------------------------------------------------------------------
-# Favourites
-# ---------------------------------------------------------------------------
-
 @login_required
 def favourite_toggle(request, property_id):
     if request.user.is_platform_admin:
@@ -41,10 +37,6 @@ def favourite_list(request):
         {'favourites': favourites}
     )
 
-
-# ---------------------------------------------------------------------------
-# Compare: pick 2 or 3 favourite homes and see them side by side
-# ---------------------------------------------------------------------------
 
 @login_required
 def compare_select(request):
