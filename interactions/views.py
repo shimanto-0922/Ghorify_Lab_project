@@ -91,7 +91,6 @@ def compare_select(request):
         {'favourites': favourites}
     )
 
-
 @login_required
 def comparison_detail(request, comparison_id):
     comparison = get_object_or_404(Comparison, id=comparison_id, tenant=request.user)
