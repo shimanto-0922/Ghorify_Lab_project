@@ -4,7 +4,6 @@ from properties.models import Property
 from . import forms
 from .matching import smart_match
 
-
 def search(request):
     has_query = False
     for key in request.GET:
