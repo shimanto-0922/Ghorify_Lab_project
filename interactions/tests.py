@@ -1,11 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
-
 from accounts.models import User
 from properties.models import Property
-
 from .models import Comparison, Favourite
-
 
 class InteractionFlowTests(TestCase):
     def setUp(self):
